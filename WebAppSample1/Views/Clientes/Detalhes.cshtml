@@ -1,0 +1,133 @@
+﻿@model WebAppSample1.Models.RegisterUsers
+
+@{
+    ViewData["Title"] = "Detalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detahes</h2>
+
+<div>
+    <h4>RegisterUsers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CODUSU)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CODUSU)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.STAREC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.STAREC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DATCAD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DATCAD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DATUPD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DATUPD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPPES)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TIPPES)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CODPJU)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CODPJU)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NUMIRG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NUMIRG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CODCMF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CODCMF)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMUSU)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NOMUSU)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMMAE)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NOMMAE)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DATNAC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DATNAC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CODATR)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CODATR)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ATRPPE)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ATRPPE)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UFEEMI)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UFEEMI)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ORGEMI)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ORGEMI)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CODECV)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CODECV)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DSCECV)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DSCECV)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DSCUFE)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DSCUFE)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DSCGEN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DSCGEN)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CODUSU }) |
+    <a asp-action="Index">Back to List</a>
+</div>

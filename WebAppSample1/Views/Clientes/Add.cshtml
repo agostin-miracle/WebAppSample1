@@ -1,0 +1,106 @@
+﻿@model WebAppSample1.Models.RegisterUsers
+
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="Add">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="NOMUSU" class="control-label"></label>
+                <input asp-for="NOMUSU" class="form-control border-input" />
+                <span asp-validation-for="NOMUSU" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="NOMMAE" class="control-label"></label>
+                <input asp-for="NOMMAE" class="form-control border-input" />
+                <span asp-validation-for="NOMMAE" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="TIPPES" class="control-label"></label>
+                <select asp-for="TIPPES" class="form-control" asp-items="@ViewBag.GenList" data-style="select-with-transition"></select>
+                <span asp-validation-for="TIPPES" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="CODPJU" class="control-label"></label>
+                <input asp-for="CODPJU" class="form-control" />
+                <span asp-validation-for="CODPJU" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label asp-for="NUMIRG" class="control-label"></label>
+            <input asp-for="NUMIRG" class="form-control" />
+            <span asp-validation-for="NUMIRG" class="text-danger"></span>
+
+        </div>
+        <div class="col-md-6">
+            <label asp-for="CODCMF" class="control-label"></label>
+            <input asp-for="CODCMF" class="form-control" />
+            <span asp-validation-for="CODCMF" class="text-danger"></span>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label asp-for="ORGEMI" class="control-label"></label>
+            <input asp-for="ORGEMI" class="form-control" />
+            <span asp-validation-for="ORGEMI" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="UFEEMI" class="control-label"></label>
+            <select asp-for="UFEEMI" class="form-control" asp-items="@ViewBag.UfeList" data-style="select-with-transition"></select>
+            <span asp-validation-for="UFEEMI" class="text-danger"></span>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label asp-for="CODECV" class="control-label"></label>
+            <select asp-for="CODECV" class="form-control" asp-items="@ViewBag.EcvList" data-style="select-with-transition"></select>
+            <span asp-validation-for="CODECV" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="DATNAC" class="control-label"></label>
+            <input asp-for="DATNAC" class="form-control" />
+            <span asp-validation-for="DATNAC" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <input asp-for="ATRPPE" /> @Html.DisplayNameFor(model => model.ATRPPE)
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-default" />
+    </div>
+</form>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

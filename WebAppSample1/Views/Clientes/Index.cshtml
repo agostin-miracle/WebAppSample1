@@ -1,0 +1,92 @@
+﻿@model IEnumerable<WebAppSample1.Models.RegisterUsers>
+
+    @{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+
+    <div class="header">
+        <h4 class="title">Clientes</h4>
+    </div>
+
+    <p>
+        <a asp-action="Add" class="btn btn-info btn-fill btn-wd">Novo Cliente</a>
+    </p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CODUSU)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DSCGEN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NUMIRG)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CODCMF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NOMUSU)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NOMMAE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DATNAC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ORGEMI)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UFEEMI)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DSCECV)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CODUSU)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DSCGEN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NUMIRG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CODCMF)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOMUSU)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOMMAE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DATNAC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ORGEMI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UFEEMI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DSCECV)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", "clientes",new { id=item.CODUSU }) |
+                    @Html.ActionLink("Detalhe", "Detalhes", "clientes", new {  id=item.CODUSU }) |
+                </td>
+            </tr>
+}
+        </tbody>
+    </table>
